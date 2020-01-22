@@ -108,19 +108,12 @@ body {
 @keyframes moveInDown {
     0% {
         opacity: 0;
-        transform: translateY(100px);
-    }
-    80% {
-        transform: translateY(-10px);
+        transform: translateY(30px);
     }
     100% {
         opacity: 1;
         transform: translateX(0);
     }
-}
-
-.btn {
-   animation: moveInDown 1s ease-out;
 }
 
 .btn:link,
@@ -146,6 +139,11 @@ body {
 .btn-white {
     background-color: #fff;
     color: #777;
+}
+
+.btn-animated {
+    animation: moveInDown .5s ease-out .75s;
+    animation-fill-mode: backwards; /* ustawia animację na 0% przed jeszcze przed startem animacji */
 }
 
 /*.btn:hover::after {*/
