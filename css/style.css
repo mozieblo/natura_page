@@ -105,6 +105,24 @@ body {
     }
 }
 
+@keyframes moveInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    80% {
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.btn {
+   animation: moveInDown 1s ease-out;
+}
+
 .btn:link,
 .btn:visited {
     text-transform: uppercase;
@@ -129,23 +147,6 @@ body {
     background-color: #fff;
     color: #777;
 }
-
-/*.btn::after {*/
-/*    !*content: "";*!*/
-/*    display: inline-block;*/
-/*    width: 100%;*/
-/*    height: 100%;*/
-/*    border-radius: 100px;*/
-/*    position: absolute;*/
-/*    top: 0;*/
-/*    left: 0;*/
-/*    z-index: -1;*/
-/*    transition: all .4s;*/
-/*}*/
-
-/*.btn-white::after {*/
-/*    background-color: #fff;*/
-/*}*/
 
 /*.btn:hover::after {*/
 /*    transform: scaleX(1.4) scaleY(1.6);*/
