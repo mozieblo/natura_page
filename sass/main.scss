@@ -4,6 +4,7 @@ $color-primary-dark: #28b485;
 
 $color-grey-dark: #777;
 $color-white: #fff;
+$color-black: #000;
 
 *,
 *::after,
@@ -41,48 +42,48 @@ body {
   position: relative;
 
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-}
 
-.header__logo-box {
-  position: absolute;
-  top: 4rem;
-  left: 4rem;
-}
+  &__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+  }
 
-.header__logo {
-  height: 3.5rem;
-}
+  &__logo {
+    height: 3.5rem;
+  }
 
-.header__text-box {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
+   &__text-box {
+     position: absolute;
+     top: 40%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     text-align: center;
+  }
 }
 
 .heading-primary {
   color: $color-white;
   text-transform: uppercase;
   padding-bottom: 6rem;
-}
 
-.heading-primary--main {
-  display: block;
-  font-size: 6rem;
-  letter-spacing: 3.5rem;
-  font-weight: 400;
-  animation-name: moveInLeft;
-  animation-duration: 1s;
-  animation-timing-function: ease-out;
-}
+  &--main {
+    display: block;
+    font-size: 6rem;
+    letter-spacing: 3.5rem;
+    font-weight: 400;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+  }
 
-.heading-primary--sub {
-  display: block;
-  font-weight: 700;
-  font-size: 2rem;
-  letter-spacing: 1.4rem;
-  animation: moveInRight 1s ease-out;
+  &--sub {
+    display: block;
+    font-weight: 700;
+    font-size: 2rem;
+    letter-spacing: 1.4rem;
+    animation: moveInRight 1s ease-out;
+  }
 }
 
 @keyframes moveInLeft {
@@ -124,34 +125,36 @@ body {
   }
 }
 
-.btn:link,
-.btn:visited {
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 1.5rem 4rem;
-  display: inline-block;
-  border-radius: 10rem;
-  transition: all .2s;
-}
+.btn {
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    border-radius: 10rem;
+    transition: all .2s;
+  }
 
-.btn:hover {
-  transform: translateY(-.3rem);
-  box-shadow: 0 1rem 2rem rgba(0,0,0,.2);
-}
+  &:hover {
+    transform: translateY(-.3rem);
+    box-shadow: 0 1rem 2rem rgba($color-black,.2);
+  }
 
-.btn:active {
-  transform: translateY(-.1rem);
-  box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
-}
+  &:active {
+    transform: translateY(-.1rem);
+    box-shadow: 0 .5rem 1rem rgba($color-black,.2);
+  }
 
-.btn--white {
-  background-color: $color-white;
-  color: $color-grey-dark;
-}
+  &--white {
+    background-color: $color-white;
+    color: $color-grey-dark;
+  }
 
-.btn--animated {
-  animation: moveInDown .5s ease-out .75s;
-  animation-fill-mode: backwards; /* ustawia animację na 0% jeszcze przed startem animacji */
+  &--animated {
+    animation: moveInDown .5s ease-out .75s;
+    animation-fill-mode: backwards; /* ustawia animację na 0% jeszcze przed startem animacji */
+  }
 }
 
 /*.btn:hover::after {*/
