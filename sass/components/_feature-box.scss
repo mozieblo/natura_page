@@ -10,13 +10,16 @@
     &__icon {
         font-size: 6rem;
         margin-bottom: .5rem;
-        display: inline-block;
+    }
+
+    &__icon:before {
         background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
         -webkit-background-clip: text;
         color: transparent;
+        width: 1.5em;
     }
 
     &:hover {
-        transform: translateY(1.5rem) scale(1.03rem);
+        transform: translateY(-1.5rem) scale(1.03);
     }
 }
